@@ -67,7 +67,7 @@ After cleaning and organizing the dataset, I uploaded it to BigQuery for SQL-bas
 
 # Process
 
-## Exploratory SQL Analysis(BigQuery):
+# Exploratory SQL Analysis(BigQuery):
 
 ## 1. Explore Sales Trends Over Time:
 
@@ -133,7 +133,7 @@ ORDER BY
 * Product: LG Dryer
 * Total Quantity Sold: 633
 
-## 3.  Finding Best-selling product by total sales each:
+## 3.  Finding the Best-selling product by total sales each:
 
 `SELECT
     Product,
@@ -146,7 +146,7 @@ ORDER BY    Product`
 
 ![Best selling products](https://github.com/harshthegoose/MeriSkill-Sales-Analysis/assets/19995625/784ad284-5dd3-4bed-89ad-0130ad3e120f)
 
->this chart shows the distribution of sales over all products. 
+> This chart shows the distribution of sales over all products. 
 
 * Top-selling product: Macbook Pro Laptop
 * Total sales: $7,867,600
@@ -157,7 +157,7 @@ ORDER BY    Product`
 
 # Analyze
 
- Top 5 best-selling products using a stacked bar chart. 
+## 4. Top 5 best-selling products using a stacked bar chart. 
 
 `WITH SalesPerProduct AS (
   SELECT
@@ -183,7 +183,7 @@ Limit 5;`
 **Top Products Drive Sales:**
 * Sales data analysis reveals that the top 5 best-selling products contribute nearly half (almost 50%) of all total orders.
 
-# 2. Top 5 cities by sales on map
+## 5. Top 5 cities by sales on map
 
 `SELECT    CITY,
     SUM(QUANTITY_ORDERED * PRICE_EACH) AS TotalSales
@@ -206,7 +206,7 @@ Los Angeles follows closely behind at $5,310,846.
 
 > The chart shows the top 5 cities by sales. 
 
-3.  Weekly sales distribution by weekday.
+## 6.  Weekly sales distribution by weekday.
 
 `SELECT
     EXTRACT(DAYOFWEEK FROM ORDER_DATE) AS Weekday_Number,
@@ -239,14 +239,14 @@ Sales Spike: Tuesdays see the highest sales volume.
 Slow Thursday: Thursdays experience the lowest sales compared to other weekdays.
 Weekend Trend: Weekends show average sales figures, suggesting a consistent but less dramatic sales pattern compared to weekdays.
 
-# 4. To find the revenue metrics:
+## 7. To find the revenue metrics:
 
 * **Total profit**: Sum up the net profit from all sales transactions.
 * **Sales quantity**: Calculate the total number of units sold.
 * **Profit margin**: Compute the ratio of net profit to total revenue, usually expressed as a percentage.
 
 
-## 1. Total Sales:- Revenue = Sum of Sales
+### 1. Total Sales:- Revenue = Sum of Sales
 
 
 ![Total sales](https://github.com/harshthegoose/MeriSkill-Sales-Analysis/assets/19995625/b6cc6db9-eb73-4056-a416-8711725f58bf)
@@ -254,14 +254,14 @@ Weekend Trend: Weekends show average sales figures, suggesting a consistent but 
  >The results showed that the revenue was 33671.60K.
 
 
-## 2. Sales quantity:- Sum of Quantity Ordered.
+### 2. Sales quantity:- Sum of Quantity Ordered.
 
 ![Qty Ordered](https://github.com/harshthegoose/MeriSkill-Sales-Analysis/assets/19995625/25b68d5a-6985-4b9a-b41b-4d315331d531)
 
  >The results showed that the Sales Quantity was 200.85K.
 
 
-## 3. Profit margin: 
+### 3. Profit margin: 
 
 Find the total cost by using the new measure
 Total Cost = SUM('Sales Data'[Price Each])
@@ -281,23 +281,23 @@ PM = ( ([Total Sales] - [Total Cost] ) / [Total Sales] ) * 100
 
 December has the highest overall sales, followed by October and April. A bar chart would effectively illustrate these trends.
 
-**Top-Selling Products:**
+*Top-Selling Products:*
 
 * By unit sales, AAA Batteries (4-pack) is the leader, followed by LG Dryer (least seller).
 * In terms of total revenue, the Macbook Pro Laptop reigns supreme, contributing significantly (23.36%) to total sales.
 
-**Top Contributors:**
+*Top Contributors:*
 
 * The top 5 best-selling products account for nearly half of all sales, highlighting their crucial role in driving revenue.
 * The top 5 sales cities are spread nationwide, indicating a diverse customer base.
 * San Francisco leads the pack with the highest total sales, followed by Los Angeles.
 
-**Weekly Sales Patterns:**
+*Weekly Sales Patterns:*
 
 * Tuesdays witness the highest sales volume, while Thursdays experience the lowest.
 * Weekends see average sales, suggesting a consistent but less dramatic pattern than weekdays.
 
-**Revenue Metrics:**
+*Revenue Metrics:*
 
 * Total revenue is impressive at 33671.60K.
 * The total sales quantity is substantial at 200.85K units.
@@ -305,7 +305,7 @@ December has the highest overall sales, followed by October and April. A bar cha
 
 # Act
 
-Additional Recommendations:
+*Additional Recommendations:*
 
 * We should consider analyzing sales trends by product category or brand for deeper insights.
 * Explore customer demographics to identify target markets for specific products.
