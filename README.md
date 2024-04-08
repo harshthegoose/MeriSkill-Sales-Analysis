@@ -16,13 +16,13 @@ This study will pass through the six phases of the data life cycle which are;
 # Ask
 
 
-**Business task**
+### **Business task**
 
 To Analyze sales data to identify trends, top-selling products, and revenue metrics for business decision-making.
 
 
 
-**Key stakeholders**
+### **Key stakeholders**
 
 MeriSkill
 
