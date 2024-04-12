@@ -277,7 +277,7 @@ PM = ( ([Total Sales] - [Total Cost] ) / [Total Sales] ) * 100
 
 # Share
 
-###Here are some insights that I got from my analysis,
+### Here are some insights that I got from my analysis,
 
 December has the highest overall sales, followed by October and April. A bar chart would effectively illustrate these trends.
 
